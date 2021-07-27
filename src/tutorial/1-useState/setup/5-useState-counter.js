@@ -1,7 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const UseStateCounter = () => {
-  return <h2>useState counter example</h2>;
+  const [counter, setCounter] = useState(0);
+
+  const handleCounterPlus = (counter) => {
+    console.log(counter);
+    let newV = counter + 1;
+    setCounter(newV);
+  };
+
+  const handleCounterMinus = (counter) => {
+    let newV = counter - 1;
+    setCounter(newV);
+  };
+
+  return (
+    <>
+      <h1>{counter}</h1>
+      <button className="btn" onClick={() => handleCounterPlus(counter)}>
+        +
+      </button>
+      <button className="btn" onClick={() => handleCounterMinus(counter)}>
+        -
+      </button>
+      <button className="btn" onClick={() => setCounter(0)}>
+        reset
+      </button>
+
+      <button
+        type="button"
+        onClick={() =>
+          setTimeout(() => {
+            setCounter((pre) => pre + 1);
+          }, 2000)
+        }
+      >
+        {" "}
+        Delay +
+      </button>
+    </>
+  );
 };
 
 export default UseStateCounter;

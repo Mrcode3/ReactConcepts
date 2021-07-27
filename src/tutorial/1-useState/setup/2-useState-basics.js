@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const UseStateBasics = () => {
-  return <h2>useState basic example</h2>;
+  const [text, setText] = useState("My Title");
+
+  return (
+    <React.Fragment>
+      <h2>useState basic example</h2>
+      <h5 onMouseOut={() => setText("WOW")}>{text}</h5>
+    </React.Fragment>
+  );
 };
 
 export default UseStateBasics;
