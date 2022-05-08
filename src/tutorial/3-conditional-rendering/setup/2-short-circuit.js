@@ -2,6 +2,18 @@ import React, { useState } from "react";
 // short-circuit evaluation
 // ternary operator
 
+/*
+var a; // undefined (falsy value)
+var b = null; // null (falsy value)
+var c = undefined; undefined (falsy value)
+var d = 4; // number (NOT falsy)
+var e = 'five'; // assigment short circuits before reaching here
+
+var f = a || b || c || d || e;
+
+console.log(f); //4
+*/
+
 const ShortCircuit = () => {
   // const firstValue = text || 'hello world';
   // const secondValue = text && 'hello world';

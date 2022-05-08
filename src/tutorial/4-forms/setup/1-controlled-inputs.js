@@ -25,7 +25,7 @@ const ControlledInputs = () => {
       setFirstname("");
       setEmail("");
     } else {
-      console.log("empty values");
+      alert("empty values");
     }
   };
 
@@ -49,6 +49,7 @@ const ControlledInputs = () => {
               type="text"
               id="firstName"
               name="firstName"
+              placeholder="Please enter your full name here."
               value={firstName}
               onChange={handleChangeName}
             />
@@ -60,6 +61,7 @@ const ControlledInputs = () => {
               type="text"
               id="email"
               name="email"
+              placeholder="123@mail.com"
               value={email}
               onChange={handleChangeEmail}
             />

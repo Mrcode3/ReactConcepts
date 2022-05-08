@@ -8,9 +8,11 @@ const UseEffectCleanup = () => {
   const checkSize = () => {
     setSize(window.innerWidth);
   };
+
   useEffect(() => {
     console.log("effect");
-
+    //The second parameter is the function we want to call when
+    //the event occurs.
     window.addEventListener("resize", checkSize);
     return () => {
       console.log("clean");
@@ -23,6 +25,9 @@ const UseEffectCleanup = () => {
     <>
       <h1>Window</h1>
       <h2>{size} PX</h2>
+      <button className="btn" id="1">
+        +
+      </button>
     </>
   );
 };

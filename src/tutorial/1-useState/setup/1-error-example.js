@@ -23,6 +23,16 @@ const ErrorExample = () => {
       >
         Change Title
       </button>
+
+      <button
+        className="btn"
+        type="button"
+        onClick={() => setTitle("hello!")}
+        value="30"
+        name="btn2"
+      >
+        Click here
+      </button>
     </div>
   );
 };

@@ -5,6 +5,26 @@ import React, { useState } from "react";
 // React
 // value, onChange
 // dynamic object keys  -- setPerson({ ...person, [name]: value })
+// let key = 'firstName';
+// const user = {
+//    [key]: 'Harshal'
+// };
+// console.log(user);
+// {firstName: "Harshal"}
+
+// let me = {
+//   name: 'samantha',
+// };
+
+// // 1. Dot notation
+// me.name; // samantha
+
+// // 2. Bracket notation (string key)
+// me['name']; // samantha
+
+// // 3. Bracket notation (variable key)
+// let key = 'name';
+// me[key]; // samantha
 
 const ControlledInputs = () => {
   const [person, setPerson] = useState({
@@ -22,10 +42,13 @@ const ControlledInputs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { firstName, email, age } = person;
-    if (firstName && email && age) {
+
+    if (firstName && email && !isNaN(age)) {
       const newPerson = { ...person, id: new Date().getTime().toString() };
       setPeople([...people, newPerson]);
       setPerson({ firstName: "", email: "", age: "" });
+    } else {
+      alert("invalid value");
     }
   };
 

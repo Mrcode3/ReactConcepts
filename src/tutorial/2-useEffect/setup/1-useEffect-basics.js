@@ -11,7 +11,7 @@ const UseEffectBasics = () => {
   const [value, setValue] = useState(0);
   useEffect(() => {
     console.log("useEffect");
-    document.title = `new value(${value})`;
+    document.title = `new value ${value}`;
   });
 
   console.log("render");

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const UseStateBasics = () => {
-  const [text, setText] = useState("My Title");
+  const [text, setText] = useState("hey");
 
   return (
     <React.Fragment>

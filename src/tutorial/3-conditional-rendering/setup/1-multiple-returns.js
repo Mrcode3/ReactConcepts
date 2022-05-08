@@ -3,7 +3,7 @@ const url = "https://api.github.com/users/QuincyLarson";
 
 const MultipleReturns = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsErroe] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [user, setUser] = useState("No User at this time");
 
   async function fetchText() {

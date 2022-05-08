@@ -2,15 +2,22 @@ import React, { useState, useEffect } from "react";
 
 const url = "https://api.github.com/users";
 
+/*async and await make promises easier to write"
+
+async makes a function return a Promise
+
+await makes a function wait for a Promise */
+
 const UseEffectFetchData = () => {
   const [user, setUser] = useState([]);
 
-  const getUser = async () => {
-    const response = await fetch(url);
-    const users = await response.json();
-    setUser(users);
-  };
   useEffect(() => {
+    const getUser = async () => {
+      const response = await fetch(url);
+      const users = await response.json();
+      setUser(users);
+    };
+
     getUser();
   }, []);
 
