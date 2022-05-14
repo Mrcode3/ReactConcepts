@@ -8,6 +8,7 @@ const ErrorExample = () => {
     const { name, value } = e.target;
     console.log(name + value);
   };
+
   return (
     <div>
       <h2>{title}</h2>
