@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const UseStateCounter = () => {
   const [counter, setCounter] = useState(0);
+  console.log(setCounter);
 
   const handleCounterPlus = (counter) => {
     console.log(counter);
@@ -29,6 +30,7 @@ const UseStateCounter = () => {
 
       <button
         type="button"
+        className="btn"
         onClick={() =>
           setTimeout(() => {
             setCounter((pre) => pre + 1);

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import PersonContext from "./peopleContext";
+import { PeopleContext } from "./1-context-api";
 
 const SinglePerson = ({ id, name }) => {
-  const { removePerson } = useContext(PersonContext);
+  const { removePerson } = useContext(PeopleContext);
   return (
     <div className="item">
       <h3>{id}</h3>

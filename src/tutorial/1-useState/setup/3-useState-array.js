@@ -15,7 +15,7 @@ const UseStateArray = () => {
           <div key={id} className="item">
             <h4>{name}</h4>
             <button className="btn" onClick={() => removeItem(id)}>
-              Delete
+              delete
             </button>
           </div>
         );
@@ -23,6 +23,9 @@ const UseStateArray = () => {
 
       <button className="btn" onClick={() => setPeople([])}>
         Clear All
+      </button>
+      <button className="btn" onClick={() => setPeople(data)}>
+        Reset
       </button>
     </>
   );

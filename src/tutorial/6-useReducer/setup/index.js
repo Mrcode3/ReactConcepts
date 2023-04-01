@@ -67,3 +67,73 @@ const Index = () => {
 };
 
 export default Index;
+
+// import React, { useState, useReducer } from "react";
+// import Modal from "./Modal";
+// import { reducer } from "./reducer";
+
+// const defaultState = {
+//   people: [],
+//   isModalOpen: false,
+//   modalContent: "",
+// };
+// const Index = () => {
+//   const [name, setName] = useState("");
+//   const [state, dispatch] = useReducer(reducer, defaultState);
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     if (name) {
+//       const newPerson = [
+//         ...state.people,
+//         { id: new Date().getTime().toString(), name: name },
+//       ];
+//       dispatch({ type: "ADD", payload: newPerson });
+//       setName("");
+//     } else {
+//       dispatch({ type: "NO_VALUE" });
+//     }
+//   };
+
+//   const removeModal = () => {
+//     dispatch({ type: "REMOVE_MODAL" });
+//   };
+
+//   return (
+//     <>
+//       {state.isModalOpen ? (
+//         <Modal modalContent={state.modalContent} removeModal={removeModal} />
+//       ) : null}
+//       <form className="form" onSubmit={handleSubmit}>
+//         <h4>add person</h4>
+//         <div>
+//           <input
+//             type="text"
+//             value={name}
+//             onChange={(e) => setName(e.target.value)}
+//           />
+//         </div>
+//         <button className="btn" type="submit">
+//           Submit
+//         </button>
+//       </form>
+//       {state.people.map((person) => {
+//         const { id, name } = person;
+
+//         return (
+//           <div key={id} className="item">
+//             <h4>{name}</h4>
+//             <button
+//               className="btn"
+//               onClick={() => dispatch({ type: "REMOVE_ITEM", payload: id })}
+//             >
+//               remove
+//             </button>
+//           </div>
+//         );
+//       })}
+//     </>
+//   );
+// };
+
+// export default Index;

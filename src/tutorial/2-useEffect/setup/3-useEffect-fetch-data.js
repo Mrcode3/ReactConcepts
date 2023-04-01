@@ -17,7 +17,6 @@ const UseEffectFetchData = () => {
       const users = await response.json();
       setUser(users);
     };
-
     getUser();
   }, []);
 

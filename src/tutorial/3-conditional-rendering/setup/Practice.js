@@ -49,7 +49,7 @@ const Practice = () => {
     <div>
       <h2>{user}</h2>
       <p>-----------------------------</p>
-      <button className="btn" onClick={() => isToggle(true)}>
+      <button className="btn" onClick={() => isToggle(!toggle)}>
         Toggle
       </button>
       {toggle && <Item />}

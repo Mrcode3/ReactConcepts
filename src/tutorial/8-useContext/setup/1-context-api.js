@@ -1,15 +1,18 @@
 import React, { useState, useContext } from "react";
 import { data } from "../../../data";
 import SinglePerson from "./singlePerson";
-import PeopleContext from "./peopleContext";
+// import PeopleContext from "./peopleContext";
 
 // more components
 // fix - context api, redux (for more complex cases)
 //useContext hook makes it easy to pass data throughout your app without
 //manually passing props down the tree.
 
+export const PeopleContext = React.createContext();
+
 const ContextAPI = () => {
   const [people, setPeople] = useState(data);
+
   const removePerson = (id) => {
     setPeople((people) => {
       return people.filter((person) => person.id !== id);
@@ -33,16 +36,5 @@ const List = () => {
     </>
   );
 };
-
-// const SinglePerson = ({ id, name }) => {
-//   const { removePerson } = useContext(PersonContext);
-//   return (
-//     <div className="item">
-//       <h3>{id}</h3>
-//       <h4>{name}</h4>
-//       <button onClick={() => removePerson(id)}>remove</button>
-//     </div>
-//   );
-// };
 
 export default ContextAPI;
